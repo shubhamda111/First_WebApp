@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>result</title>
+    <style>
+        .test{
+        margin:40px 50px 60px 70px;
+        padding:5px;
+        }
+
+        h4{
+        border:2px solid green;
+        border-radius:10px 7px 10px 7px;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Their are {{word_count}} word  in this paragraph</h1>
+<a href="{%  url 'home' %}">click here for home </a><br><br>
+<h4 class="test">{{article}}</h4>
+<br>
+{% for word,num in dict_words %}
+<h3>String = {{word}}  |  No. of times occured = {{num}}</h3>
+
+{% endfor %}
+
+</body>
+</html>
